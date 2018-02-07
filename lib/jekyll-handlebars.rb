@@ -21,7 +21,7 @@ module Jekyll
       def write(dest)
         dest_path = destination(dest)
         FileUtils.mkdir_p(File.dirname(dest_path))
-        `handlebars #{@src} -f #{dest_path}`
+        `handlebars -m #{@src} -f #{dest_path}`
 
         true
       end
